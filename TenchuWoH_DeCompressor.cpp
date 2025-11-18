@@ -225,7 +225,7 @@ std::vector<ScanResult> scanContainer(const std::vector<uint8_t>& fileBuffer) {
 
     // 1. Encontra todos os candidatos
     for (size_t off = 0; off <= n - 12; off += 4) { // Pula de 4 em 4 bytes
-        // Checagem rápida de plausibilidade (do seu script)
+        // Checagem rápida de plausibilidade
         const uint8_t* data = fileBuffer.data() + off;
         uint32_t ol = *reinterpret_cast<const uint32_t*>(data + 0);
         uint32_t orf = *reinterpret_cast<const uint32_t*>(data + 4);
